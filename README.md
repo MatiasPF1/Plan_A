@@ -12,6 +12,11 @@ A comprehensive web platform for birth control information, community support, a
 
 ## Setup Instructions
 
+### 0. Get Files
+- Option 1 --> Just download all files
+- Option 2 --> Use Git(it could be a little to much to configure at first, so if you dont have it , just do 1) --> on terminal type : git clone https://github.com/MatiasPF1/Plan_A.git
+
+
 ### 1. Install Python Dependencies
 
 ```bash
@@ -60,5 +65,6 @@ The chatbot uses LangChain for AI-powered responses. Currently configured with:
 - The chatbot provides general information only and does not constitute medical advice
 - Always consult with qualified healthcare providers for personalized medical guidance
 - For production deployment, ensure proper security measures and API key protection
+
 
 
