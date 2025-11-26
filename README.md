@@ -18,22 +18,7 @@ A comprehensive web platform for birth control information, community support, a
 pip install -r requirements.txt
 ```
 
-### 2. Environment Variables (Optional)
-
-For production use with OpenAI API, create a `.env` file:
-
-```bash
-cp .env.example .env
-```
-
-Then edit `.env` and add your OpenAI API key:
-```
-OPENAI_API_KEY=your_actual_api_key_here
-```
-
-**Note**: The chatbot works without an API key using rule-based responses. For more advanced AI capabilities, add your OpenAI API key.
-
-### 3. Run the Application
+### 2. Run the Application
 
 ```bash
 python app.py
@@ -72,8 +57,8 @@ The chatbot uses LangChain for AI-powered responses. Currently configured with:
 - AI: LangChain (with optional OpenAI integration)
 
 ## Important Notes
-
 - The chatbot provides general information only and does not constitute medical advice
 - Always consult with qualified healthcare providers for personalized medical guidance
 - For production deployment, ensure proper security measures and API key protection
+
 
