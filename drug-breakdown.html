@@ -10,7 +10,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="index.html" class="logo-link">🐰 BirthControl Connect</a>
+                <a href="index.html" class="logo-link">🐰 PlanA</a>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
@@ -37,12 +37,6 @@
                         <span>Symptom Tracker</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="/chatbot" class="nav-link">
-                        <span class="nav-icon">💬</span>
-                        <span>Chatbot</span>
-                    </a>
-                </li>
             </ul>
             <div class="nav-actions">
                 <button class="nav-button">Sign In</button>
@@ -60,74 +54,619 @@
             <div class="drug-breakdown-container">
                 <div class="breakdown-header">
                     <div class="pill-icon-small">💊</div>
-                    <h1 class="breakdown-title">Levonorgestrel Breakdown</h1>
+                    <h1 class="breakdown-title">Birth Control Drug Breakdown</h1>
+                    <p class="breakdown-subtitle">Swipe to explore different options</p>
                 </div>
 
-                <div class="breakdown-visual">
-                    <div class="component-icon">
-                        <svg class="molecular-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="50" cy="30" r="8" fill="#87CEEB"/>
-                            <circle cx="30" cy="50" r="8" fill="#87CEEB"/>
-                            <circle cx="70" cy="50" r="8" fill="#87CEEB"/>
-                            <circle cx="50" cy="70" r="8" fill="#87CEEB"/>
-                            <line x1="50" y1="30" x2="30" y2="50" stroke="#87CEEB" stroke-width="2"/>
-                            <line x1="50" y1="30" x2="70" y2="50" stroke="#87CEEB" stroke-width="2"/>
-                            <line x1="30" y1="50" x2="50" y2="70" stroke="#87CEEB" stroke-width="2"/>
-                            <line x1="70" y1="50" x2="50" y2="70" stroke="#87CEEB" stroke-width="2"/>
-                        </svg>
-                        <p class="component-label">Levonorgestrel</p>
-                    </div>
-                    <div class="pill-shape"></div>
-                    <div class="component-icon">
-                        <svg class="molecular-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="50" cy="30" r="8" fill="#FFB6C1"/>
-                            <circle cx="30" cy="50" r="8" fill="#FFB6C1"/>
-                            <circle cx="70" cy="50" r="8" fill="#FFB6C1"/>
-                            <circle cx="50" cy="70" r="8" fill="#FFB6C1"/>
-                            <line x1="50" y1="30" x2="30" y2="50" stroke="#FFB6C1" stroke-width="2"/>
-                            <line x1="50" y1="30" x2="70" y2="50" stroke="#FFB6C1" stroke-width="2"/>
-                            <line x1="30" y1="50" x2="50" y2="70" stroke="#FFB6C1" stroke-width="2"/>
-                            <line x1="70" y1="50" x2="50" y2="70" stroke="#FFB6C1" stroke-width="2"/>
-                        </svg>
-                        <p class="component-label">Ethinyl Estradiol</p>
-                    </div>
-                </div>
+                <div class="swipe-container">
+                    <div class="swipe-cards" id="swipeCards">
 
-                <div class="breakdown-cards">
-                    <div class="breakdown-card">
-                        <div class="card-header">
-                            <div class="card-bullet bullet-blue"></div>
-                            <h2 class="card-title">Levonorgestrel (Progestin)</h2>
+                        <!-- Card 1: Yaz/Yasmin -->
+                        <div class="swipe-card" data-card="1">
+                            <div class="card-inner">
+                                <div class="drug-header-card">
+                                    <h2 class="drug-name-card">Yaz / Yasmin</h2>
+                                    <span class="drug-type">Combination Pill</span>
+                                </div>
+
+                                <div class="drug-subtitle">Drospirenone/Ethinyl Estradiol</div>
+
+                                <div class="breakdown-visual-card">
+                                    <div class="component-icon-small">
+                                        <svg class="molecular-icon-small" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="50" cy="30" r="8" fill="#87CEEB"/>
+                                            <circle cx="30" cy="50" r="8" fill="#87CEEB"/>
+                                            <circle cx="70" cy="50" r="8" fill="#87CEEB"/>
+                                            <circle cx="50" cy="70" r="8" fill="#87CEEB"/>
+                                            <line x1="50" y1="30" x2="30" y2="50" stroke="#87CEEB" stroke-width="2"/>
+                                            <line x1="50" y1="30" x2="70" y2="50" stroke="#87CEEB" stroke-width="2"/>
+                                            <line x1="30" y1="50" x2="50" y2="70" stroke="#87CEEB" stroke-width="2"/>
+                                            <line x1="70" y1="50" x2="50" y2="70" stroke="#87CEEB" stroke-width="2"/>
+                                        </svg>
+                                        <p class="component-label-small">Drospirenone</p>
+                                    </div>
+                                    <div class="pill-shape-small"></div>
+                                    <div class="component-icon-small">
+                                        <svg class="molecular-icon-small" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="50" cy="30" r="8" fill="#FFB6C1"/>
+                                            <circle cx="30" cy="50" r="8" fill="#FFB6C1"/>
+                                            <circle cx="70" cy="50" r="8" fill="#FFB6C1"/>
+                                            <circle cx="50" cy="70" r="8" fill="#FFB6C1"/>
+                                            <line x1="50" y1="30" x2="30" y2="50" stroke="#FFB6C1" stroke-width="2"/>
+                                            <line x1="50" y1="30" x2="70" y2="50" stroke="#FFB6C1" stroke-width="2"/>
+                                            <line x1="30" y1="50" x2="50" y2="70" stroke="#FFB6C1" stroke-width="2"/>
+                                            <line x1="70" y1="50" x2="50" y2="70" stroke="#FFB6C1" stroke-width="2"/>
+                                        </svg>
+                                        <p class="component-label-small">Ethinyl Estradiol</p>
+                                    </div>
+                                </div>
+
+                                <div class="card-section">
+                                    <h3 class="section-title">How It Works</h3>
+                                    <ul class="card-list-compact">
+                                        <li><span class="bullet-blue-dot">●</span> Prevents ovulation</li>
+                                        <li><span class="bullet-blue-dot">●</span> Thickens cervical mucus</li>
+                                        <li><span class="bullet-pink-dot">●</span> Stabilizes uterine lining</li>
+                                        <li><span class="bullet-pink-dot">●</span> May help reduce bloating and acne</li>
+                                    </ul>
+                                </div>
+
+                                <div class="info-grid-card">
+                                    <div class="info-item">
+                                        <span class="info-label">Effectiveness</span>
+                                        <span class="info-value">99%+</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">Best For</span>
+                                        <span class="info-value">PMDD, Acne</span>
+                                    </div>
+                                </div>
+
+                                <div class="side-effects-compact">
+                                    <strong>Common Side Effects:</strong> Nausea, headache, breast tenderness, mood changes
+                                </div>
+                            </div>
                         </div>
-                        <ul class="card-list">
-                            <li>Prevents ovulation</li>
-                            <li>Thickens cervical mucus</li>
-                            <li>Maintains pregnancy prevention</li>
-                        </ul>
-                    </div>
 
-                    <div class="breakdown-card">
-                        <div class="card-header">
-                            <div class="card-bullet bullet-pink"></div>
-                            <h2 class="card-title">Ethinyl Estradiol (Estrogen)</h2>
+                        <!-- Card 2: Ortho Tri-Cyclen -->
+                        <div class="swipe-card" data-card="2">
+                            <div class="card-inner">
+                                <div class="drug-header-card">
+                                    <h2 class="drug-name-card">Ortho Tri-Cyclen</h2>
+                                    <span class="drug-type">Triphasic Pill</span>
+                                </div>
+
+                                <div class="drug-subtitle">Norgestimate/Ethinyl Estradiol</div>
+
+                                <div class="breakdown-visual-card">
+                                    <div class="component-icon-small">
+                                        <svg class="molecular-icon-small" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="50" cy="30" r="8" fill="#87CEEB"/>
+                                            <circle cx="30" cy="50" r="8" fill="#87CEEB"/>
+                                            <circle cx="70" cy="50" r="8" fill="#87CEEB"/>
+                                            <circle cx="50" cy="70" r="8" fill="#87CEEB"/>
+                                            <line x1="50" y1="30" x2="30" y2="50" stroke="#87CEEB" stroke-width="2"/>
+                                            <line x1="50" y1="30" x2="70" y2="50" stroke="#87CEEB" stroke-width="2"/>
+                                            <line x1="30" y1="50" x2="50" y2="70" stroke="#87CEEB" stroke-width="2"/>
+                                            <line x1="70" y1="50" x2="50" y2="70" stroke="#87CEEB" stroke-width="2"/>
+                                        </svg>
+                                        <p class="component-label-small">Norgestimate</p>
+                                    </div>
+                                    <div class="pill-shape-small"></div>
+                                    <div class="component-icon-small">
+                                        <svg class="molecular-icon-small" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="50" cy="30" r="8" fill="#FFB6C1"/>
+                                            <circle cx="30" cy="50" r="8" fill="#FFB6C1"/>
+                                            <circle cx="70" cy="50" r="8" fill="#FFB6C1"/>
+                                            <circle cx="50" cy="70" r="8" fill="#FFB6C1"/>
+                                            <line x1="50" y1="30" x2="30" y2="50" stroke="#FFB6C1" stroke-width="2"/>
+                                            <line x1="50" y1="30" x2="70" y2="50" stroke="#FFB6C1" stroke-width="2"/>
+                                            <line x1="30" y1="50" x2="50" y2="70" stroke="#FFB6C1" stroke-width="2"/>
+                                            <line x1="70" y1="50" x2="50" y2="70" stroke="#FFB6C1" stroke-width="2"/>
+                                        </svg>
+                                        <p class="component-label-small">Ethinyl Estradiol</p>
+                                    </div>
+                                </div>
+
+                                <div class="card-section">
+                                    <h3 class="section-title">How It Works</h3>
+                                    <ul class="card-list-compact">
+                                        <li><span class="bullet-blue-dot">●</span> Third-generation progestin</li>
+                                        <li><span class="bullet-blue-dot">●</span> Varying doses throughout cycle</li>
+                                        <li><span class="bullet-pink-dot">●</span> Mimics natural hormone fluctuation</li>
+                                        <li><span class="bullet-pink-dot">●</span> Lower androgenic activity</li>
+                                    </ul>
+                                </div>
+
+                                <div class="info-grid-card">
+                                    <div class="info-item">
+                                        <span class="info-label">Effectiveness</span>
+                                        <span class="info-value">99%+</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">Best For</span>
+                                        <span class="info-value">Acne, Regular Cycles</span>
+                                    </div>
+                                </div>
+
+                                <div class="side-effects-compact">
+                                    <strong>Common Side Effects:</strong> Spotting, nausea, headaches, breast changes
+                                </div>
+                            </div>
                         </div>
-                        <ul class="card-list">
-                            <li>Stabilizes uterine lining</li>
-                            <li>Works with progestin</li>
-                            <li>Regulates menstrual cycle</li>
-                        </ul>
+
+                        <!-- Card 3: Lo Loestrin Fe -->
+                        <div class="swipe-card" data-card="3">
+                            <div class="card-inner">
+                                <div class="drug-header-card">
+                                    <h2 class="drug-name-card">Lo Loestrin Fe</h2>
+                                    <span class="drug-type">Ultra Low-Dose</span>
+                                </div>
+
+                                <div class="drug-subtitle">Norethindrone Acetate/Ethinyl Estradiol</div>
+
+                                <div class="breakdown-visual-card">
+                                    <div class="component-icon-small">
+                                        <svg class="molecular-icon-small" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="50" cy="30" r="8" fill="#87CEEB"/>
+                                            <circle cx="30" cy="50" r="8" fill="#87CEEB"/>
+                                            <circle cx="70" cy="50" r="8" fill="#87CEEB"/>
+                                            <circle cx="50" cy="70" r="8" fill="#87CEEB"/>
+                                            <line x1="50" y1="30" x2="30" y2="50" stroke="#87CEEB" stroke-width="2"/>
+                                            <line x1="50" y1="30" x2="70" y2="50" stroke="#87CEEB" stroke-width="2"/>
+                                            <line x1="30" y1="50" x2="50" y2="70" stroke="#87CEEB" stroke-width="2"/>
+                                            <line x1="70" y1="50" x2="50" y2="70" stroke="#87CEEB" stroke-width="2"/>
+                                        </svg>
+                                        <p class="component-label-small">Norethindrone</p>
+                                    </div>
+                                    <div class="pill-shape-small"></div>
+                                    <div class="component-icon-small">
+                                        <svg class="molecular-icon-small" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="50" cy="30" r="8" fill="#FFB6C1"/>
+                                            <circle cx="30" cy="50" r="8" fill="#FFB6C1"/>
+                                            <circle cx="70" cy="50" r="8" fill="#FFB6C1"/>
+                                            <circle cx="50" cy="70" r="8" fill="#FFB6C1"/>
+                                            <line x1="50" y1="30" x2="30" y2="50" stroke="#FFB6C1" stroke-width="2"/>
+                                            <line x1="50" y1="30" x2="70" y2="50" stroke="#FFB6C1" stroke-width="2"/>
+                                            <line x1="30" y1="50" x2="50" y2="70" stroke="#FFB6C1" stroke-width="2"/>
+                                            <line x1="70" y1="50" x2="50" y2="70" stroke="#FFB6C1" stroke-width="2"/>
+                                        </svg>
+                                        <p class="component-label-small">Ethinyl Estradiol</p>
+                                    </div>
+                                    <div class="component-icon-small">
+                                        <svg class="molecular-icon-small" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="50" cy="30" r="8" fill="#FFA07A"/>
+                                            <circle cx="30" cy="50" r="8" fill="#FFA07A"/>
+                                            <circle cx="70" cy="50" r="8" fill="#FFA07A"/>
+                                            <circle cx="50" cy="70" r="8" fill="#FFA07A"/>
+                                            <line x1="50" y1="30" x2="30" y2="50" stroke="#FFA07A" stroke-width="2"/>
+                                            <line x1="50" y1="30" x2="70" y2="50" stroke="#FFA07A" stroke-width="2"/>
+                                            <line x1="30" y1="50" x2="50" y2="70" stroke="#FFA07A" stroke-width="2"/>
+                                            <line x1="70" y1="50" x2="50" y2="70" stroke="#FFA07A" stroke-width="2"/>
+                                        </svg>
+                                        <p class="component-label-small">Iron</p>
+                                    </div>
+                                </div>
+
+                                <div class="card-section">
+                                    <h3 class="section-title">How It Works</h3>
+                                    <ul class="card-list-compact">
+                                        <li><span class="bullet-blue-dot">●</span> Prevents ovulation</li>
+                                        <li><span class="bullet-pink-dot">●</span> Ultra-low estrogen dose (10 mcg)</li>
+                                        <li><span class="bullet-orange-dot">●</span> Iron supplement included</li>
+                                        <li><span class="bullet-pink-dot">●</span> May result in lighter periods</li>
+                                    </ul>
+                                </div>
+
+                                <div class="info-grid-card">
+                                    <div class="info-item">
+                                        <span class="info-label">Effectiveness</span>
+                                        <span class="info-value">99%+</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">Best For</span>
+                                        <span class="info-value">Lowest Estrogen</span>
+                                    </div>
+                                </div>
+
+                                <div class="side-effects-compact">
+                                    <strong>Common Side Effects:</strong> Irregular bleeding, headaches, fewer hormonal side effects
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4: Plan B -->
+                        <div class="swipe-card" data-card="4">
+                            <div class="card-inner">
+                                <div class="drug-header-card">
+                                    <h2 class="drug-name-card">Plan B One-Step</h2>
+                                    <span class="drug-type">Emergency</span>
+                                </div>
+
+                                <div class="drug-subtitle">Levonorgestrel</div>
+
+                                <div class="breakdown-visual-card">
+                                    <div class="component-icon-small">
+                                        <svg class="molecular-icon-small" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="50" cy="30" r="8" fill="#87CEEB"/>
+                                            <circle cx="30" cy="50" r="8" fill="#87CEEB"/>
+                                            <circle cx="70" cy="50" r="8" fill="#87CEEB"/>
+                                            <circle cx="50" cy="70" r="8" fill="#87CEEB"/>
+                                            <line x1="50" y1="30" x2="30" y2="50" stroke="#87CEEB" stroke-width="2"/>
+                                            <line x1="50" y1="30" x2="70" y2="50" stroke="#87CEEB" stroke-width="2"/>
+                                            <line x1="30" y1="50" x2="50" y2="70" stroke="#87CEEB" stroke-width="2"/>
+                                            <line x1="70" y1="50" x2="50" y2="70" stroke="#87CEEB" stroke-width="2"/>
+                                        </svg>
+                                        <p class="component-label-small">Levonorgestrel 1.5mg</p>
+                                    </div>
+                                    <div class="pill-shape-small"></div>
+                                </div>
+
+                                <div class="card-section">
+                                    <h3 class="section-title">How It Works</h3>
+                                    <ul class="card-list-compact">
+                                        <li><span class="bullet-blue-dot">●</span> Delays or prevents ovulation</li>
+                                        <li><span class="bullet-blue-dot">●</span> May prevent fertilization</li>
+                                        <li><span class="bullet-blue-dot">●</span> Does NOT cause abortion</li>
+                                        <li><span class="bullet-blue-dot">●</span> Single dose, most effective within 72 hours</li>
+                                    </ul>
+                                </div>
+
+                                <div class="info-grid-card">
+                                    <div class="info-item">
+                                        <span class="info-label">Effectiveness</span>
+                                        <span class="info-value">89%</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">Best For</span>
+                                        <span class="info-value">Emergency Use</span>
+                                    </div>
+                                </div>
+
+                                <div class="side-effects-compact">
+                                    <strong>Common Side Effects:</strong> Nausea, fatigue, headache, irregular bleeding
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 5: NuvaRing -->
+                        <div class="swipe-card" data-card="5">
+                            <div class="card-inner">
+                                <div class="drug-header-card">
+                                    <h2 class="drug-name-card">NuvaRing</h2>
+                                    <span class="drug-type">Vaginal Ring</span>
+                                </div>
+
+                                <div class="drug-subtitle">Etonogestrel/Ethinyl Estradiol</div>
+
+                                <div class="breakdown-visual-card">
+                                    <div class="component-icon-small">
+                                        <svg class="molecular-icon-small" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="50" cy="30" r="8" fill="#87CEEB"/>
+                                            <circle cx="30" cy="50" r="8" fill="#87CEEB"/>
+                                            <circle cx="70" cy="50" r="8" fill="#87CEEB"/>
+                                            <circle cx="50" cy="70" r="8" fill="#87CEEB"/>
+                                            <line x1="50" y1="30" x2="30" y2="50" stroke="#87CEEB" stroke-width="2"/>
+                                            <line x1="50" y1="30" x2="70" y2="50" stroke="#87CEEB" stroke-width="2"/>
+                                            <line x1="30" y1="50" x2="50" y2="70" stroke="#87CEEB" stroke-width="2"/>
+                                            <line x1="70" y1="50" x2="50" y2="70" stroke="#87CEEB" stroke-width="2"/>
+                                        </svg>
+                                        <p class="component-label-small">Etonogestrel</p>
+                                    </div>
+                                    <div class="pill-shape-small"></div>
+                                    <div class="component-icon-small">
+                                        <svg class="molecular-icon-small" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="50" cy="30" r="8" fill="#FFB6C1"/>
+                                            <circle cx="30" cy="50" r="8" fill="#FFB6C1"/>
+                                            <circle cx="70" cy="50" r="8" fill="#FFB6C1"/>
+                                            <circle cx="50" cy="70" r="8" fill="#FFB6C1"/>
+                                            <line x1="50" y1="30" x2="30" y2="50" stroke="#FFB6C1" stroke-width="2"/>
+                                            <line x1="50" y1="30" x2="70" y2="50" stroke="#FFB6C1" stroke-width="2"/>
+                                            <line x1="30" y1="50" x2="50" y2="70" stroke="#FFB6C1" stroke-width="2"/>
+                                            <line x1="70" y1="50" x2="50" y2="70" stroke="#FFB6C1" stroke-width="2"/>
+                                        </svg>
+                                        <p class="component-label-small">Ethinyl Estradiol</p>
+                                    </div>
+                                </div>
+
+                                <div class="card-section">
+                                    <h3 class="section-title">How It Works</h3>
+                                    <ul class="card-list-compact">
+                                        <li><span class="bullet-blue-dot">●</span> Continuously releases hormones for 3 weeks</li>
+                                        <li><span class="bullet-blue-dot">●</span> Prevents ovulation</li>
+                                        <li><span class="bullet-pink-dot">●</span> Absorbed through vaginal tissue</li>
+                                        <li><span class="bullet-pink-dot">●</span> No daily pill required</li>
+                                    </ul>
+                                </div>
+
+                                <div class="info-grid-card">
+                                    <div class="info-item">
+                                        <span class="info-label">Effectiveness</span>
+                                        <span class="info-value">99%+</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">Best For</span>
+                                        <span class="info-value">Monthly Method</span>
+                                    </div>
+                                </div>
+
+                                <div class="side-effects-compact">
+                                    <strong>Common Side Effects:</strong> Vaginal irritation, discharge, headache, nausea
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 6: Nexplanon -->
+                        <div class="swipe-card" data-card="6">
+                            <div class="card-inner">
+                                <div class="drug-header-card">
+                                    <h2 class="drug-name-card">Nexplanon</h2>
+                                    <span class="drug-type">Implant</span>
+                                </div>
+
+                                <div class="drug-subtitle">Etonogestrel Implant</div>
+
+                                <div class="breakdown-visual-card">
+                                    <div class="component-icon-small">
+                                        <svg class="molecular-icon-small" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="50" cy="30" r="8" fill="#87CEEB"/>
+                                            <circle cx="30" cy="50" r="8" fill="#87CEEB"/>
+                                            <circle cx="70" cy="50" r="8" fill="#87CEEB"/>
+                                            <circle cx="50" cy="70" r="8" fill="#87CEEB"/>
+                                            <line x1="50" y1="30" x2="30" y2="50" stroke="#87CEEB" stroke-width="2"/>
+                                            <line x1="50" y1="30" x2="70" y2="50" stroke="#87CEEB" stroke-width="2"/>
+                                            <line x1="30" y1="50" x2="50" y2="70" stroke="#87CEEB" stroke-width="2"/>
+                                            <line x1="70" y1="50" x2="50" y2="70" stroke="#87CEEB" stroke-width="2"/>
+                                        </svg>
+                                        <p class="component-label-small">Etonogestrel (Progestin-Only)</p>
+                                    </div>
+                                </div>
+
+                                <div class="card-section">
+                                    <h3 class="section-title">How It Works</h3>
+                                    <ul class="card-list-compact">
+                                        <li><span class="bullet-blue-dot">●</span> Small rod inserted under arm skin</li>
+                                        <li><span class="bullet-blue-dot">●</span> Lasts up to 3 years</li>
+                                        <li><span class="bullet-blue-dot">●</span> Prevents ovulation continuously</li>
+                                        <li><span class="bullet-blue-dot">●</span> No estrogen - safer for more people</li>
+                                    </ul>
+                                </div>
+
+                                <div class="info-grid-card">
+                                    <div class="info-item">
+                                        <span class="info-label">Effectiveness</span>
+                                        <span class="info-value">99%+</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">Best For</span>
+                                        <span class="info-value">Long-Term</span>
+                                    </div>
+                                </div>
+
+                                <div class="side-effects-compact">
+                                    <strong>Common Side Effects:</strong> Irregular bleeding, headaches, weight gain, acne
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 7: Depo-Provera -->
+                        <div class="swipe-card" data-card="7">
+                            <div class="card-inner">
+                                <div class="drug-header-card">
+                                    <h2 class="drug-name-card">Depo-Provera</h2>
+                                    <span class="drug-type">Injectable</span>
+                                </div>
+
+                                <div class="drug-subtitle">Medroxyprogesterone Acetate</div>
+
+                                <div class="breakdown-visual-card">
+                                    <div class="component-icon-small">
+                                        <svg class="molecular-icon-small" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="50" cy="30" r="8" fill="#87CEEB"/>
+                                            <circle cx="30" cy="50" r="8" fill="#87CEEB"/>
+                                            <circle cx="70" cy="50" r="8" fill="#87CEEB"/>
+                                            <circle cx="50" cy="70" r="8" fill="#87CEEB"/>
+                                            <line x1="50" y1="30" x2="30" y2="50" stroke="#87CEEB" stroke-width="2"/>
+                                            <line x1="50" y1="30" x2="70" y2="50" stroke="#87CEEB" stroke-width="2"/>
+                                            <line x1="30" y1="50" x2="50" y2="70" stroke="#87CEEB" stroke-width="2"/>
+                                            <line x1="70" y1="50" x2="50" y2="70" stroke="#87CEEB" stroke-width="2"/>
+                                        </svg>
+                                        <p class="component-label-small">Medroxyprogesterone</p>
+                                    </div>
+                                </div>
+
+                                <div class="card-section">
+                                    <h3 class="section-title">How It Works</h3>
+                                    <ul class="card-list-compact">
+                                        <li><span class="bullet-blue-dot">●</span> Injection every 3 months</li>
+                                        <li><span class="bullet-blue-dot">●</span> Prevents ovulation</li>
+                                        <li><span class="bullet-blue-dot">●</span> No estrogen component</li>
+                                        <li><span class="bullet-blue-dot">●</span> May stop periods completely</li>
+                                    </ul>
+                                </div>
+
+                                <div class="info-grid-card">
+                                    <div class="info-item">
+                                        <span class="info-label">Effectiveness</span>
+                                        <span class="info-value">99%+</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">Best For</span>
+                                        <span class="info-value">Quarterly Visits</span>
+                                    </div>
+                                </div>
+
+                                <div class="side-effects-compact">
+                                    <strong>Common Side Effects:</strong> Irregular bleeding, weight gain, bone density changes
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 8: Mirena -->
+                        <div class="swipe-card" data-card="8">
+                            <div class="card-inner">
+                                <div class="drug-header-card">
+                                    <h2 class="drug-name-card">Mirena IUD</h2>
+                                    <span class="drug-type">Hormonal IUD</span>
+                                </div>
+
+                                <div class="drug-subtitle">Levonorgestrel IUD</div>
+
+                                <div class="breakdown-visual-card">
+                                    <div class="component-icon-small">
+                                        <svg class="molecular-icon-small" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="50" cy="30" r="8" fill="#87CEEB"/>
+                                            <circle cx="30" cy="50" r="8" fill="#87CEEB"/>
+                                            <circle cx="70" cy="50" r="8" fill="#87CEEB"/>
+                                            <circle cx="50" cy="70" r="8" fill="#87CEEB"/>
+                                            <line x1="50" y1="30" x2="30" y2="50" stroke="#87CEEB" stroke-width="2"/>
+                                            <line x1="50" y1="30" x2="70" y2="50" stroke="#87CEEB" stroke-width="2"/>
+                                            <line x1="30" y1="50" x2="50" y2="70" stroke="#87CEEB" stroke-width="2"/>
+                                            <line x1="70" y1="50" x2="50" y2="70" stroke="#87CEEB" stroke-width="2"/>
+                                        </svg>
+                                        <p class="component-label-small">Levonorgestrel</p>
+                                    </div>
+                                </div>
+
+                                <div class="card-section">
+                                    <h3 class="section-title">How It Works</h3>
+                                    <ul class="card-list-compact">
+                                        <li><span class="bullet-blue-dot">●</span> T-shaped device in uterus</li>
+                                        <li><span class="bullet-blue-dot">●</span> Lasts up to 8 years</li>
+                                        <li><span class="bullet-blue-dot">●</span> Releases hormone locally</li>
+                                        <li><span class="bullet-blue-dot">●</span> May eliminate or lighten periods</li>
+                                    </ul>
+                                </div>
+
+                                <div class="info-grid-card">
+                                    <div class="info-item">
+                                        <span class="info-label">Effectiveness</span>
+                                        <span class="info-value">99%+</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">Best For</span>
+                                        <span class="info-value">Long-Term</span>
+                                    </div>
+                                </div>
+
+                                <div class="side-effects-compact">
+                                    <strong>Common Side Effects:</strong> Irregular bleeding initially, cramps, headaches
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Carousel Navigation -->
+                    <div class="carousel-nav">
+                        <button class="carousel-btn" id="prevBtn">‹</button>
+                        <div class="carousel-dots" id="carouselDots"></div>
+                        <button class="carousel-btn" id="nextBtn">›</button>
+                    </div>
+
+                    <!-- Card Counter -->
+                    <div class="card-counter">
+                        <span id="currentCard">1</span> / 8
                     </div>
                 </div>
 
-                <div class="how-they-work">
-                    <h2 class="how-they-work-title">How they work together:</h2>
-                    <p class="how-they-work-text">These two hormones work as a team to prevent pregnancy. The progestin does most of the heavy lifting by stopping your ovaries from releasing eggs, while the estrogen helps keep your cycle regular and reduces breakthrough bleeding.</p>
-                </div>
             </div>
         </section>
     </main>
 
     <script src="script.js"></script>
+    <script>
+        // Carousel Functionality
+        let currentCardIndex = 0;
+        const track = document.getElementById('swipeCards');
+        const cards = document.querySelectorAll('.swipe-card');
+        const cardCounter = document.getElementById('currentCard');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const dotsContainer = document.getElementById('carouselDots');
+        const cardWidth = 520; // card width + gap
+
+        // Create dots
+        cards.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.className = 'carousel-dot' + (index === 0 ? ' active' : '');
+            dot.addEventListener('click', () => goToCard(index));
+            dotsContainer.appendChild(dot);
+        });
+
+        function updateCarousel() {
+            // Move the track
+            const offset = currentCardIndex * cardWidth;
+            track.style.transform = `translateX(-${offset}px)`;
+            
+            // Update card states
+            cards.forEach((card, index) => {
+                card.classList.remove('active', 'prev', 'next');
+                if (index === currentCardIndex) {
+                    card.classList.add('active');
+                } else if (index === currentCardIndex - 1) {
+                    card.classList.add('prev');
+                } else if (index === currentCardIndex + 1) {
+                    card.classList.add('next');
+                }
+            });
+            
+            // Update counter
+            cardCounter.textContent = currentCardIndex + 1;
+            
+            // Update dots
+            document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentCardIndex);
+            });
+            
+            // Update button states
+            prevBtn.disabled = currentCardIndex === 0;
+            nextBtn.disabled = currentCardIndex === cards.length - 1;
+        }
+
+        function goToCard(index) {
+            if (index >= 0 && index < cards.length) {
+                currentCardIndex = index;
+                updateCarousel();
+            }
+        }
+
+        function nextCard() {
+            if (currentCardIndex < cards.length - 1) {
+                currentCardIndex++;
+                updateCarousel();
+            }
+        }
+
+        function prevCard() {
+            if (currentCardIndex > 0) {
+                currentCardIndex--;
+                updateCarousel();
+            }
+        }
+
+        // Click on side cards to navigate
+        cards.forEach((card, index) => {
+            card.addEventListener('click', () => {
+                if (index !== currentCardIndex) {
+                    goToCard(index);
+                }
+            });
+        });
+
+        // Button events
+        prevBtn.addEventListener('click', prevCard);
+        nextBtn.addEventListener('click', nextCard);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') prevCard();
+            if (e.key === 'ArrowRight') nextCard();
+        });
+
+        // Initialize
+        updateCarousel();
+    </script>
 </body>
 </html>
 

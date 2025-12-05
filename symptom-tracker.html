@@ -10,7 +10,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="index.html" class="logo-link">🐰 BirthControl Connect</a>
+                <a href="index.html" class="logo-link">🐰 PlanA</a>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
@@ -37,12 +37,6 @@
                         <span>Symptom Tracker</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="/chatbot" class="nav-link">
-                        <span class="nav-icon">💬</span>
-                        <span>Chatbot</span>
-                    </a>
-                </li>
             </ul>
             <div class="nav-actions">
                 <button class="nav-button">Sign In</button>
@@ -58,98 +52,271 @@
     <main class="content">
         <section class="tracker-section">
             <div class="tracker-container">
+                <!-- Header -->
                 <div class="tracker-header">
-                    <div class="tracker-icon">📊</div>
-                    <h1 class="tracker-title">Symptom Tracker</h1>
-                    <p class="tracker-subtitle">Track your symptoms, side effects, and cycle patterns to better understand your body</p>
+                    <h1 class="tracker-title">📊 Symptom Tracker</h1>
+                    <p class="tracker-subtitle">Track your daily symptoms and discover patterns</p>
                 </div>
 
-                <div class="tracker-features">
-                    <div class="tracker-feature-card">
-                        <div class="tracker-feature-icon">📅</div>
-                        <h3 class="tracker-feature-title">Cycle Tracking</h3>
-                        <p class="tracker-feature-text">Log your menstrual cycle, track period dates, and identify patterns over time.</p>
-                    </div>
-                    <div class="tracker-feature-card">
-                        <div class="tracker-feature-icon">💊</div>
-                        <h3 class="tracker-feature-title">Side Effects</h3>
-                        <p class="tracker-feature-text">Monitor side effects and symptoms to help identify what works best for your body.</p>
-                    </div>
-                    <div class="tracker-feature-card">
-                        <div class="tracker-feature-icon">📈</div>
-                        <h3 class="tracker-feature-title">Visual Reports</h3>
-                        <p class="tracker-feature-text">Generate beautiful charts and reports to share with your healthcare provider.</p>
-                    </div>
-                </div>
-
-                <div class="tracker-categories">
-                    <h2 class="categories-title">What You Can Track</h2>
-                    <div class="categories-grid">
-                        <div class="category-item">
-                            <span class="category-bullet">•</span>
-                            <span>Menstrual cycle dates</span>
-                        </div>
-                        <div class="category-item">
-                            <span class="category-bullet">•</span>
-                            <span>Mood changes</span>
-                        </div>
-                        <div class="category-item">
-                            <span class="category-bullet">•</span>
-                            <span>Physical symptoms</span>
-                        </div>
-                        <div class="category-item">
-                            <span class="category-bullet">•</span>
-                            <span>Side effects</span>
-                        </div>
-                        <div class="category-item">
-                            <span class="category-bullet">•</span>
-                            <span>Energy levels</span>
-                        </div>
-                        <div class="category-item">
-                            <span class="category-bullet">•</span>
-                            <span>Sleep patterns</span>
-                        </div>
-                        <div class="category-item">
-                            <span class="category-bullet">•</span>
-                            <span>Headaches</span>
-                        </div>
-                        <div class="category-item">
-                            <span class="category-bullet">•</span>
-                            <span>Weight changes</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tracker-benefits">
-                    <h2 class="benefits-title">Benefits of Tracking</h2>
-                    <div class="benefits-list">
-                        <div class="benefit-item">
-                            <div class="benefit-icon">🎯</div>
-                            <div class="benefit-content">
-                                <h4 class="benefit-heading">Better Communication</h4>
-                                <p class="benefit-text">Share accurate data with your healthcare provider to make informed decisions together.</p>
+                <div class="tracker-layout">
+                    <!-- Left Panel - Calendar & Quick Stats -->
+                    <div class="tracker-sidebar">
+                        <!-- Mini Calendar -->
+                        <div class="tracker-card calendar-card">
+                            <div class="card-header">
+                                <h3>December 2024</h3>
+                                <div class="calendar-nav">
+                                    <button class="cal-nav-btn">‹</button>
+                                    <button class="cal-nav-btn">›</button>
+                                </div>
+                            </div>
+                            <div class="mini-calendar">
+                                <div class="cal-weekdays">
+                                    <span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
+                                </div>
+                                <div class="cal-days">
+                                    <span class="other-month">26</span>
+                                    <span class="other-month">27</span>
+                                    <span class="other-month">28</span>
+                                    <span class="other-month">29</span>
+                                    <span class="other-month">30</span>
+                                    <span>1</span>
+                                    <span class="has-log">2</span>
+                                    <span class="has-log period">3</span>
+                                    <span class="has-log period">4</span>
+                                    <span class="has-log period">5</span>
+                                    <span class="has-log">6</span>
+                                    <span class="has-log">7</span>
+                                    <span>8</span>
+                                    <span>9</span>
+                                    <span>10</span>
+                                    <span>11</span>
+                                    <span>12</span>
+                                    <span>13</span>
+                                    <span>14</span>
+                                    <span>15</span>
+                                    <span>16</span>
+                                    <span>17</span>
+                                    <span>18</span>
+                                    <span>19</span>
+                                    <span>20</span>
+                                    <span>21</span>
+                                    <span>22</span>
+                                    <span>23</span>
+                                    <span>24</span>
+                                    <span>25</span>
+                                    <span>26</span>
+                                    <span>27</span>
+                                    <span>28</span>
+                                    <span>29</span>
+                                    <span>30</span>
+                                    <span>31</span>
+                                    <span class="today">4</span>
+                                </div>
+                            </div>
+                            <div class="calendar-legend">
+                                <span class="legend-item"><span class="dot period-dot"></span> Period</span>
+                                <span class="legend-item"><span class="dot log-dot"></span> Logged</span>
+                                <span class="legend-item"><span class="dot today-dot"></span> Today</span>
                             </div>
                         </div>
-                        <div class="benefit-item">
-                            <div class="benefit-icon">🔍</div>
-                            <div class="benefit-content">
-                                <h4 class="benefit-heading">Identify Patterns</h4>
-                                <p class="benefit-text">Spot trends and patterns in your symptoms to understand your body's unique responses.</p>
+
+                        <!-- Quick Stats -->
+                        <div class="tracker-card stats-card">
+                            <h3>This Month</h3>
+                            <div class="quick-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value">7</span>
+                                    <span class="stat-label">Days Logged</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">3</span>
+                                    <span class="stat-label">Period Days</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">28</span>
+                                    <span class="stat-label">Cycle Length</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="benefit-item">
-                            <div class="benefit-icon">💪</div>
-                            <div class="benefit-content">
-                                <h4 class="benefit-heading">Take Control</h4>
-                                <p class="benefit-text">Feel empowered with data-driven insights about your reproductive health journey.</p>
+
+                        <!-- Streak -->
+                        <div class="tracker-card streak-card">
+                            <div class="streak-content">
+                                <span class="streak-icon">🔥</span>
+                                <div class="streak-info">
+                                    <span class="streak-number">5 Day Streak!</span>
+                                    <span class="streak-text">Keep logging to maintain it</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="tracker-cta">
-                    <button class="cta-button">Start Tracking</button>
-                    <p class="cta-note">Sign in to begin tracking your symptoms and cycles</p>
+                    <!-- Main Panel - Log Entry -->
+                    <div class="tracker-main">
+                        <!-- Today's Log -->
+                        <div class="tracker-card log-card">
+                            <div class="log-header">
+                                <h2>Today's Log</h2>
+                                <span class="log-date">Wednesday, Dec 4</span>
+                            </div>
+
+                            <!-- Mood Section -->
+                            <div class="log-section">
+                                <h4 class="section-label">How are you feeling?</h4>
+                                <div class="mood-selector">
+                                    <button class="mood-btn" data-mood="great">😊<span>Great</span></button>
+                                    <button class="mood-btn" data-mood="good">🙂<span>Good</span></button>
+                                    <button class="mood-btn selected" data-mood="okay">😐<span>Okay</span></button>
+                                    <button class="mood-btn" data-mood="low">😔<span>Low</span></button>
+                                    <button class="mood-btn" data-mood="bad">😢<span>Bad</span></button>
+                                </div>
+                            </div>
+
+                            <!-- Energy Level -->
+                            <div class="log-section">
+                                <h4 class="section-label">Energy Level</h4>
+                                <div class="energy-slider">
+                                    <input type="range" min="1" max="5" value="3" class="slider" id="energySlider">
+                                    <div class="slider-labels">
+                                        <span>Low</span>
+                                        <span>Medium</span>
+                                        <span>High</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Symptoms -->
+                            <div class="log-section">
+                                <h4 class="section-label">Symptoms</h4>
+                                <div class="symptom-tags">
+                                    <button class="symptom-tag selected">Headache</button>
+                                    <button class="symptom-tag">Cramps</button>
+                                    <button class="symptom-tag selected">Bloating</button>
+                                    <button class="symptom-tag">Nausea</button>
+                                    <button class="symptom-tag">Fatigue</button>
+                                    <button class="symptom-tag">Back Pain</button>
+                                    <button class="symptom-tag">Breast Tenderness</button>
+                                    <button class="symptom-tag">Acne</button>
+                                    <button class="symptom-tag">Insomnia</button>
+                                    <button class="symptom-tag">Mood Swings</button>
+                                    <button class="symptom-tag add-symptom">+ Add</button>
+                                </div>
+                            </div>
+
+                            <!-- Flow (if applicable) -->
+                            <div class="log-section">
+                                <h4 class="section-label">Flow</h4>
+                                <div class="flow-selector">
+                                    <button class="flow-btn" data-flow="none">
+                                        <span class="flow-icon">○</span>
+                                        <span>None</span>
+                                    </button>
+                                    <button class="flow-btn" data-flow="spotting">
+                                        <span class="flow-icon light">●</span>
+                                        <span>Spotting</span>
+                                    </button>
+                                    <button class="flow-btn" data-flow="light">
+                                        <span class="flow-icon light">●●</span>
+                                        <span>Light</span>
+                                    </button>
+                                    <button class="flow-btn selected" data-flow="medium">
+                                        <span class="flow-icon medium">●●●</span>
+                                        <span>Medium</span>
+                                    </button>
+                                    <button class="flow-btn" data-flow="heavy">
+                                        <span class="flow-icon heavy">●●●●</span>
+                                        <span>Heavy</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Notes -->
+                            <div class="log-section">
+                                <h4 class="section-label">Notes</h4>
+                                <textarea class="notes-input" placeholder="Add any additional notes about how you're feeling today..."></textarea>
+                            </div>
+
+                            <!-- Birth Control Selection -->
+                            <div class="log-section">
+                                <h4 class="section-label">Your Birth Control</h4>
+                                <select class="bc-select" id="bcSelect">
+                                    <option value="">Select your birth control...</option>
+                                    <option value="yaz" selected>Yaz / Yasmin</option>
+                                    <option value="ortho">Ortho Tri-Cyclen</option>
+                                    <option value="loloestrin">Lo Loestrin Fe</option>
+                                    <option value="nuvaring">NuvaRing</option>
+                                    <option value="nexplanon">Nexplanon</option>
+                                    <option value="depo">Depo-Provera</option>
+                                    <option value="mirena">Mirena IUD</option>
+                                </select>
+                            </div>
+
+                            <!-- Save Button -->
+                            <button class="save-log-btn">
+                                <span>💾</span> Save & Compare with Community
+                            </button>
+                        </div>
+
+                        <!-- Community Comparison - Hidden until save -->
+                        <div class="tracker-card community-card" id="communityCard" style="display: none;">
+                            <div class="community-header">
+                                <h3>👥 Community Comparison</h3>
+                                <span class="bc-badge" id="bcBadge">Yaz / Yasmin Users</span>
+                            </div>
+                            <p class="community-subtitle">See how your symptoms compare to <strong id="userCount">2,847</strong> other users on the same birth control</p>
+                            
+                            <!-- Symptom Bubbles -->
+                            <div class="bubble-container" id="bubbleContainer">
+                                <!-- Bubbles will be generated by JS -->
+                            </div>
+
+                            <div class="community-legend">
+                                <div class="legend-row">
+                                    <span class="legend-bubble your-bubble"></span>
+                                    <span>Your symptoms today</span>
+                                </div>
+                                <div class="legend-row">
+                                    <span class="legend-bubble community-bubble"></span>
+                                    <span>Community average</span>
+                                </div>
+                            </div>
+
+                            <div class="community-insights">
+                                <div class="community-insight">
+                                    <span class="insight-badge match">✓ Similar</span>
+                                    <p>Your <strong>headache</strong> symptoms match 68% of Yaz users</p>
+                                </div>
+                                <div class="community-insight">
+                                    <span class="insight-badge higher">↑ Higher</span>
+                                    <p>You report <strong>bloating</strong> more often than 72% of users</p>
+                                </div>
+                                <div class="community-insight">
+                                    <span class="insight-badge lower">↓ Lower</span>
+                                    <p>Your <strong>mood swings</strong> are less frequent than average</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recent Insights -->
+                        <div class="tracker-card insights-card">
+                            <h3>💡 Insights</h3>
+                            <div class="insights-list">
+                                <div class="insight-item">
+                                    <span class="insight-icon">📈</span>
+                                    <p>You've logged <strong>headaches</strong> 4 times in the last 2 weeks. Consider discussing this with your doctor.</p>
+                                </div>
+                                <div class="insight-item">
+                                    <span class="insight-icon">🌙</span>
+                                    <p>Your energy tends to be lower on days 2-4 of your cycle. This is common!</p>
+                                </div>
+                                <div class="insight-item">
+                                    <span class="insight-icon">✨</span>
+                                    <p>Great job logging consistently! You're building valuable health data.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

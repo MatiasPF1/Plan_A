@@ -11,7 +11,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="index.html" class="logo-link">🐰 BirthControl Connect</a>
+                <a href="index.html" class="logo-link">🐰 PlanA</a>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
@@ -38,12 +38,6 @@
                         <span>Symptom Tracker</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="/chatbot" class="nav-link">
-                        <span class="nav-icon">💬</span>
-                        <span>Chatbot</span>
-                    </a>
-                </li>
             </ul>
             <div class="nav-actions">
                 <button class="nav-button">Sign In</button>
@@ -56,11 +50,50 @@
         </div>
     </nav>
 
+    <!-- Create Post Modal -->
+    <div class="modal" id="createPostModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Create New Post</h2>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <form id="createPostForm">
+                <div class="form-group">
+                    <label for="postTitle">Title</label>
+                    <input type="text" id="postTitle" class="form-input" placeholder="Enter your post title..." required>
+                </div>
+                <div class="form-group">
+                    <label for="postCategory">Category</label>
+                    <select id="postCategory" class="form-select" required>
+                        <option value="">Select a category...</option>
+                        <option value="Birth Control Pills">💊 Birth Control Pills</option>
+                        <option value="IUDs & Implants">🔧 IUDs & Implants</option>
+                        <option value="Side Effects">🩺 Side Effects</option>
+                        <option value="Cycle Questions">📅 Cycle Questions</option>
+                        <option value="General Questions">❓ General Questions</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="postContent">Content</label>
+                    <textarea id="postContent" class="form-textarea" rows="6" placeholder="Share your experience, ask a question, or provide information..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="userName">Your Name (Optional)</label>
+                    <input type="text" id="userName" class="form-input" placeholder="Enter your name or stay anonymous">
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel" id="cancelPost">Cancel</button>
+                    <button type="submit" class="btn-submit">Publish Post</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <div class="forum-container">
         <!-- Left Sidebar -->
         <aside class="sidebar">
             <div class="sidebar-card">
-                <button class="create-post-btn">✏️ Create Post</button>
+                <button class="create-post-btn" id="openCreatePostBtn">✏️ Create Post</button>
             </div>
             
             <div class="sidebar-card">
@@ -108,6 +141,7 @@
             </div>
 
             <!-- Post Cards -->
+            <div id="postsContainer">
             <div class="post-card">
                 <div class="post-header">
                     <div class="user-avatar">JD</div>
@@ -180,6 +214,7 @@
                     <span class="post-stat">💬 28 comments</span>
                     <span class="tag">Side Effects</span>
                 </div>
+            </div>
             </div>
         </main>
 
@@ -256,5 +291,85 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+        // Create Post Modal Functionality
+        const modal = document.getElementById('createPostModal');
+        const openBtn = document.getElementById('openCreatePostBtn');
+        const closeBtn = document.getElementById('closeModal');
+        const cancelBtn = document.getElementById('cancelPost');
+        const form = document.getElementById('createPostForm');
+        const postsContainer = document.getElementById('postsContainer');
+
+        // Open modal
+        openBtn.addEventListener('click', () => {
+            modal.classList.add('active');
+        });
+
+        // Close modal
+        function closeModal() {
+            modal.classList.remove('active');
+            form.reset();
+        }
+
+        closeBtn.addEventListener('click', closeModal);
+        cancelBtn.addEventListener('click', closeModal);
+
+        // Close modal when clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+
+        // Handle form submission
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const title = document.getElementById('postTitle').value;
+            const category = document.getElementById('postCategory').value;
+            const content = document.getElementById('postContent').value;
+            const userName = document.getElementById('userName').value || 'Anonymous';
+
+            // Create initials for avatar
+            const initials = userName === 'Anonymous' ? '?' : userName.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
+
+            // Create new post element
+            const newPost = document.createElement('div');
+            newPost.className = 'post-card';
+            newPost.style.animation = 'fadeIn 0.5s ease';
+            newPost.innerHTML = `
+                <div class="post-header">
+                    <div class="user-avatar">${initials}</div>
+                    <div class="post-meta">
+                        <div class="username">${userName}</div>
+                        <div class="post-time">Just now</div>
+                    </div>
+                </div>
+                <h3 class="post-title">${title}</h3>
+                <p class="post-preview">${content}</p>
+                <div class="post-footer">
+                    <span class="post-stat">⬆️ 0</span>
+                    <span class="post-stat">💬 0 comments</span>
+                    <span class="tag">${category}</span>
+                </div>
+            `;
+
+            // Add new post to the top of the container
+            postsContainer.insertBefore(newPost, postsContainer.firstChild);
+
+            // Close modal and reset form
+            closeModal();
+
+            // Scroll to new post
+            newPost.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+    </script>
 </body>
 </html>
